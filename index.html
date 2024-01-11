@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/Favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/Favicon.png" />
+    <title>Sirius Capital</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-bar">
+        <img class="reg-logo" src="./assets/Logo.png" alt="logo" />
+        <img class="small-logo" src="./assets/LogoSmall.png" alt="logo" />
+      </div>
+      <div class="main">
+        <div>
+          <p>Site under maintenance</p>
+          <span
+            >Oops! We're making adjustments behind the scenes. Please accept our
+            apologies for any difficulties. We're nearly there!</span
+          >
+          <button onClick="window.location.reload()">Reload</button>
+        </div>
+        <img
+          class="maintenance-img"
+          src="./assets/MaintenanceImg.svg"
+          alt="MaintenanceImg"
+        />
+
+        <img
+          class="background-img-1"
+          src="./assets/BackgroundImg.svg"
+          alt="BackgroundImg"
+        />
+        <img
+          class="background-img-2"
+          src="./assets/BackgroundImg.svg"
+          alt="BackgroundImg"
+        />
+      </div>
+      <div class="footer">
+        <ul>
+          <li>Contact us:</li>
+          <li>Phone : +374 12 300 900</li>
+          <li>
+            Email:
+            <a href="mailto:support@siriuscapital.am"
+              >support@siriuscapital.am</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function addBackgroundImageClass() {
+          document
+            .querySelector(".background-img-1")
+            .classList.add("background-img");
+          document
+            .querySelector(".background-img-2")
+            .classList.add("background-img");
+        }
+
+        function removeBackgroundImageClass() {
+          document
+            .querySelector(".background-img-1")
+            .classList.remove("background-img");
+          document
+            .querySelector(".background-img-2")
+            .classList.remove("background-img");
+        }
+
+        setTimeout(function () {
+          addBackgroundImageClass();
+        }, 3000);
+        setTimeout(function () {
+          removeBackgroundImageClass();
+        }, 8800);
+
+        setInterval(function () {
+          addBackgroundImageClass();
+          setTimeout(removeBackgroundImageClass, 5800);
+        }, 18000);
+      });
+    </script>
+  </body>
+</html>
